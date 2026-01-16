@@ -1,0 +1,81 @@
+
+<section class="container">
+
+  <header>
+    <h1>RELATÓRIO DE VERIFICAÇÃO E CALIBRAÇÃO DE ANALISADORES DE pH</h1>
+    <p>Classificação: USO INTERNO</p>
+  </header>
+
+  <form id="relatorio">
+
+    <fieldset>
+      <legend>Identificação</legend>
+
+      <div class="grid-3">
+        <label>TAG do Analisador
+          <input name="tag" required>
+        </label>
+
+        <label>Nº O.S.
+          <input name="os" required>
+        </label>
+
+        <label>Data
+          <input type="date" name="data" required>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Verificação pH 7,00</legend>
+
+      <div class="grid-4">
+        <label>pH indicado
+          <input type="number" name="ind7" value="7" step="0.01">
+        </label>
+
+        <label>pH amostra
+          <input type="number" name="amo7" step="0.01">
+        </label>
+
+        <label>Erro (%)
+          <input name="erro7" readonly>
+        </label>
+
+        <label>Status
+          <input name="status7" readonly>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Verificação pH 10,00</legend>
+
+      <div class="grid-4">
+        <label>pH indicado
+          <input type="number" name="ind10" value="10" step="0.01">
+        </label>
+
+        <label>pH amostra
+          <input type="number" name="amo10" step="0.01">
+        </label>
+
+        <label>Erro (%)
+          <input name="erro10" readonly>
+        </label>
+
+        <label>Status
+          <input name="status10" readonly>
+        </label>
+      </div>
+    </fieldset>
+
+    <div id="resultadoFinal"></div>
+
+    <div class="acoes">
+      <button type="button" onclick="processar()">Calcular</button>
+      <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+    </div>
+
+  </form>
+
